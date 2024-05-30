@@ -40,6 +40,12 @@
                     class="text-white bg-indigo-600 hover:bg-indigo-700 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium  text-sm px-4 py-2 text-center dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800 items-center rounded-full">Contact
                     us</button>
 
+                <button class="flex transition-transform hover:scale-125 align-middle" (click)="handleClicked()">
+                    <button *ngIf="!isDarkMode" class="material-icons" (click)="changetheme('dark')">dark_mode</button>
+                    <button *ngIf="isDarkMode" class="material-icons" (click)="changetheme('light')"
+                        ngClass=" bg-white  rounded-full p-1">light_mode</button>
+                </button>
+
             </ul>
         </div>
     </div>

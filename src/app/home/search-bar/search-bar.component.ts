@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class SearchBarComponent {
 
+  categories = [
+    { text: 'Industrial Machinery' },
+    { text: 'User manuals' },
+    { text: 'Electronics' },
+    { text: 'Pharma & Biotech' },
+    { text: 'Automotive' }
+  ];
+
 }
