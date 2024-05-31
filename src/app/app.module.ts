@@ -7,18 +7,22 @@ import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { SearchBarComponent } from './home/search-bar/search-bar.component';
 import { MarketComponent } from './market/market.component';
+import { CategoryComponent } from './category/category.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SearchBarComponent,
-    MarketComponent
+    MarketComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

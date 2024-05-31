@@ -24,7 +24,7 @@
     </div>
 
 
-    <app-sub-header [subHeaderText]="'Latest workflows'" [subHeaderCount]="1000"></app-sub-header>
+    <app-sub-header [categoryId]="1" [subHeaderText]="'Latest workflows'" [subHeaderCount]="1000"></app-sub-header>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <div class="col-span-1" *ngFor="let card of workFlowCards">
@@ -33,7 +33,7 @@
         </div>
     </div>
 
-    <app-sub-header [subHeaderText]="'Featured creators'" [subHeaderCount]="1000"></app-sub-header>
+    <app-sub-header  [subHeaderText]="'Featured creators'" [subHeaderCount]="1000"></app-sub-header>
 
     <div class="grid grid-cols-1 lg:grid-cols-8 gap-8 mb-24">
         <div class="col-span-1 lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
