@@ -9,4 +9,5 @@ export class FeatureCardComponent {
   @Input() title: string = '';
   @Input() subtitle: string = '';
   @Input() imgSrc: string = '';
+  
 }
