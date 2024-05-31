@@ -48,4 +48,11 @@ export class MarketComponent {
       imageSrc: '../../../../assets/workflow-8.svg'
     }
   ];
+  searchTerm: string = '';
+  getSearchResultCount(): number {
+    if (!this.searchTerm) {
+      return this.workFlowCards.length;
+    }
+    return this.workFlowCards.filter(card => card.text.toLowerCase().includes(this.searchTerm.toLowerCase())).length;
+  }
 }

@@ -9,6 +9,7 @@ import { CreatorCardComponent } from './components/creator-card/creator-card.com
 import { BreadCrumbComponent } from './components/bread-crumb/bread-crumb.component';
 import { SubHeaderComponent } from './components/sub-header/sub-header.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -22,10 +23,11 @@ import { ModalComponent } from './components/modal/modal.component';
     CreatorCardComponent,
     BreadCrumbComponent,
     SubHeaderComponent,
-    ModalComponent
+    ModalComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     NavBarComponent,

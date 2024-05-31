@@ -17,7 +17,7 @@
                             d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                     </svg>
                 </div>
-                <input type="search" id="default-search"
+                <input type="search" id="default-search" [(ngModel)]="searchTerm" name="searchTerm"
                     class="block w-full p-2.5 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Search across companies, names and categories" required />
             </div>
@@ -29,28 +29,34 @@
     <app-sub-header [subHeaderText]="'Industrial Machinery'" [subHeaderCount]="1000"></app-sub-header>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <div class="col-span-1" *ngFor="let card of workFlowCards">
-            <app-workflow-card [text]="card.text" [subText]="card.subText"
-                [imageSrc]="card.imageSrc"></app-workflow-card>
-        </div>
+        <ng-container *ngFor="let card of workFlowCards">
+            <div class="col-span-1" *ngIf="card.text.toLowerCase().includes(searchTerm.toLowerCase())">
+                <app-workflow-card [text]="card.text" [subText]="card.subText"
+                    [imageSrc]="card.imageSrc"></app-workflow-card>
+            </div>
+        </ng-container>
     </div>
 
     <app-sub-header [subHeaderText]="'User guides and manuals'" [subHeaderCount]="1000"></app-sub-header>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <div class="col-span-1" *ngFor="let card of workFlowCards">
-            <app-workflow-card [text]="card.text" [subText]="card.subText"
-                [imageSrc]="card.imageSrc"></app-workflow-card>
-        </div>
+        <ng-container *ngFor="let card of workFlowCards">
+            <div class="col-span-1" *ngIf="card.text.toLowerCase().includes(searchTerm.toLowerCase())">
+                <app-workflow-card [text]="card.text" [subText]="card.subText"
+                    [imageSrc]="card.imageSrc"></app-workflow-card>
+            </div>
+        </ng-container>
     </div>
 
     <app-sub-header [subHeaderText]="'Pharma & Biotech'" [subHeaderCount]="1000"></app-sub-header>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <div class="col-span-1" *ngFor="let card of workFlowCards">
-            <app-workflow-card [text]="card.text" [subText]="card.subText"
-                [imageSrc]="card.imageSrc"></app-workflow-card>
-        </div>
+        <ng-container *ngFor="let card of workFlowCards">
+            <div class="col-span-1" *ngIf="card.text.toLowerCase().includes(searchTerm.toLowerCase())">
+                <app-workflow-card [text]="card.text" [subText]="card.subText"
+                    [imageSrc]="card.imageSrc"></app-workflow-card>
+            </div>
+        </ng-container>
     </div>
     <app-creator-card></app-creator-card>
 </div>
