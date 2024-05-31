@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bread-crumb',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class BreadCrumbComponent {
 
+  @Input() crumbs: {text: string, link: string}[] = [];
+  constructor( private router: Router){}
+
+  handleClick(route: string) {
+    this.router.navigate([route]);
+  }
 }

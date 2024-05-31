@@ -1,5 +1,6 @@
 import { Component, HostBinding, OnInit, effect, signal } from '@angular/core';
 import { ThemeService } from '../../service/theme.service';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,7 +9,7 @@ import { ThemeService } from '../../service/theme.service';
 })
 export class NavBarComponent implements OnInit{
   isDarkMode = false;
-  constructor(private themeService: ThemeService) {}
+  constructor(private themeService: ThemeService , private router : Router) {}
   handleClicked() {
     this.isDarkMode = !this.isDarkMode;
   }
@@ -30,5 +31,9 @@ export class NavBarComponent implements OnInit{
         this.isDarkTheme = false;
       }
     });
+  }
+
+  hanndleRoute(route: string) {
+    this.router.navigate([route]);
   }
 }

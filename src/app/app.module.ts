@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { SearchBarComponent } from './home/search-bar/search-bar.component';
+import { MarketComponent } from './market/market.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    MarketComponent
   ],
   imports: [
     BrowserModule,
