@@ -1,1 +1,10 @@
-<p>workflow-card works!</p>
+<div class="block max-w-sm w-11/12 p-6 pb-0 h-[40vh] bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 relative">
+    <h5 class="text-xl font-bold text-gray-700 dark:text-white">{{ text }}</h5>
+    <h3 class="text-md text-gray-400 dark:text-white">{{subText}}</h3>
+    <div class="h-[30vh] bottom-0 absolute">
+      <div class="bg-gray-50 rounded-t-xl z-10 top-16 right-0 absolute h-[20vh] w-3/4">
+        &nbsp;
+      </div>
+      <img [src]="imageSrc" class="z-20 w-full  bottom-0 rounded-lg relative">
+    </div>
+</div>

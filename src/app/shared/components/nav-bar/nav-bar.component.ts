@@ -1,4 +1,4 @@
-import { Component, HostBinding, effect, signal } from '@angular/core';
+import { Component, HostBinding, OnInit, effect, signal } from '@angular/core';
 import { ThemeService } from '../../service/theme.service';
 
 @Component({
@@ -6,18 +6,29 @@ import { ThemeService } from '../../service/theme.service';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss']
 })
-export class NavBarComponent {
+export class NavBarComponent implements OnInit{
   isDarkMode = false;
-  constructor(private themeservice: ThemeService) {}
+  constructor(private themeService: ThemeService) {}
   handleClicked() {
     this.isDarkMode = !this.isDarkMode;
   }
   changetheme(theme:string){
     if(theme === 'dark'){
-      this.themeservice.setDarkMode(true);
+      this.themeService.setDarkMode(true);
     }
     else{
-      this.themeservice.setDarkMode(false);
+      this.themeService.setDarkMode(false);
     }
+  }
+  isDarkTheme = false;
+
+  ngOnInit(): void {
+    this.themeService.getDarkMode().subscribe((isDarkMode: boolean) => {
+      if (isDarkMode) {
+        this.isDarkTheme = true;
+      } else {
+        this.isDarkTheme = false;
+      }
+    });
   }
 }

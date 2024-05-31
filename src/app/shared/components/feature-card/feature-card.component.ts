@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-feature-card',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./feature-card.component.scss']
 })
 export class FeatureCardComponent {
-
+  @Input() title: string = '';
+  @Input() subtitle: string = '';
+  @Input() imgSrc: string = '';
 }

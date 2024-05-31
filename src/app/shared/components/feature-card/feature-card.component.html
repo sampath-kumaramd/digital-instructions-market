@@ -1,1 +1,5 @@
-<p>feature-card works!</p>
+<div class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 ">
+    <h5 class="text-xl font-bold text-gray-700 dark:text-white">{{ title }}</h5>
+    <h3 class="mb-2 text-md text-gray-400 dark:text-white">{{ subtitle }}</h3>
+    <img [src]="imgSrc" alt="{{ title }}" class="w-16 h-auto object-cover mt-8 rounded-lg">
+</div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-workflow-card',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./workflow-card.component.scss']
 })
 export class WorkflowCardComponent {
-
+  @Input() text: string= '';
+  @Input() subText: string= '';
+  @Input() imageSrc: string ='';
 }
