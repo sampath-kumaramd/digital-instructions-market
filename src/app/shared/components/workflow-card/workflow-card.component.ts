@@ -1,11 +1,12 @@
-import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { HomeComponent } from 'src/app/home/home.component';
 import { Workflow } from '../../types/Workflow';
 
 @Component({
   selector: 'app-workflow-card',
   templateUrl: './workflow-card.component.html',
-  styleUrls: ['./workflow-card.component.scss']
+  styleUrls: ['./workflow-card.component.scss'],
+  changeDetection: ChangeDetectionStrategy.Default
 })
 export class WorkflowCardComponent implements OnInit {
   nextCard: Workflow = {
@@ -67,6 +68,7 @@ export class WorkflowCardComponent implements OnInit {
 
   closeModal() {
     this.showModal = false;
+    this.card = this.parent.workFlowCards[this.curentIndex];
   }
 
   isOpen: boolean[] = [];
