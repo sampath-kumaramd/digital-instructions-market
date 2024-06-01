@@ -33,7 +33,7 @@ export class WorkflowCardComponent implements OnInit {
   curentIndex: number = 0;
   showDetails = false;
   showModal = false;
-
+  isOpen: boolean[] = [];
 
   toggleDetails() {
     this.showDetails = !this.showDetails;
@@ -53,7 +53,7 @@ export class WorkflowCardComponent implements OnInit {
     console.log(this.index);
     this.curentIndex = this.index;
     this.isOpen = new Array(this.card.FAQ.length).fill(false);
-}
+  }
   previous() {
     const previousIndex = this.index - 1;
     if (previousIndex >= 0) {
@@ -61,20 +61,14 @@ export class WorkflowCardComponent implements OnInit {
       this.index = previousIndex;
     }
   }
-
   openModal() {
     this.showModal = true;
   }
-
   closeModal() {
     this.showModal = false;
     this.card = this.parent.workFlowCards[this.curentIndex];
   }
-
-  isOpen: boolean[] = [];
-
   toggle(index: number): void {
     this.isOpen[index] = !this.isOpen[index];
   }
-
 }

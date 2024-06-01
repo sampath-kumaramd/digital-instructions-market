@@ -11,8 +11,6 @@ import { SubHeaderComponent } from './components/sub-header/sub-header.component
 import { ModalComponent } from './components/modal/modal.component';
 import { RouterModule } from '@angular/router';
 
-
-
 @NgModule({
   declarations: [
     NavBarComponent,

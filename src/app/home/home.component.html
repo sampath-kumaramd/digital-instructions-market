@@ -16,30 +16,21 @@
                         </svg>
                     </div>
                     <input type="search" id="default-search" [(ngModel)]="searchTerm" name="searchTerm"
-                    class="block w-full p-2.5 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Search across companies, names and categories" required />
+                        class="block w-full p-2.5 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                        placeholder="Search across companies, names and categories" required />
                 </div>
             </form>
         </div>
     </div>
-
-
     <app-sub-header [categoryId]="1" [subHeaderText]="'Latest workflows'" [subHeaderCount]="1000"></app-sub-header>
-
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <ng-container *ngFor="let card of workFlowCards; let i = index">
             <div class="col-span-1" *ngIf="card.text.toLowerCase().includes(searchTerm.toLowerCase())">
-                <app-workflow-card
-                [card]="card"
-                [index]="i"
-                [parent]="this"
-              ></app-workflow-card>
+                <app-workflow-card [card]="card" [index]="i" [parent]="this"></app-workflow-card>
             </div>
         </ng-container>
     </div>
-
-    <app-sub-header  [subHeaderText]="'Featured creators'" [subHeaderCount]="1000"></app-sub-header>
-
+    <app-sub-header [subHeaderText]="'Featured creators'" [subHeaderCount]="1000"></app-sub-header>
     <div class="grid grid-cols-1 lg:grid-cols-8 gap-8 mb-24">
         <div class="col-span-1 lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             <div class="col-span-1" *ngFor="let item of FeaturedData">
@@ -64,5 +55,4 @@
             </div>
         </div>
     </div>
-
 </div>

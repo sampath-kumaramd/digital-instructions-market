@@ -7,7 +7,6 @@
         </div>
     </div>
     <div class="flex  items-center justify-between mt-8">
-
         <form class="w-full">
             <div class="relative">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -22,12 +21,8 @@
                     placeholder="Search across companies, names and categories" required />
             </div>
         </form>
-
     </div>
-
-
     <app-sub-header [subHeaderText]="'Industrial Machinery'" [subHeaderCount]="1000"></app-sub-header>
-
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <ng-container *ngFor="let card of workFlowCards; let i = index">
             <div class="col-span-1" *ngIf="card.text.toLowerCase().includes(searchTerm.toLowerCase())">
@@ -35,9 +30,7 @@
             </div>
         </ng-container>
     </div>
-
     <app-sub-header [subHeaderText]="'User guides and manuals'" [subHeaderCount]="1000"></app-sub-header>
-
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <ng-container *ngFor="let card of workFlowCards; let i = index">
             <div class="col-span-1" *ngIf="card.text.toLowerCase().includes(searchTerm.toLowerCase())">
@@ -45,9 +38,7 @@
             </div>
         </ng-container>
     </div>
-
     <app-sub-header [subHeaderText]="'Pharma & Biotech'" [subHeaderCount]="1000"></app-sub-header>
-    
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         <ng-container *ngFor="let card of workFlowCards; let i = index">
             <div class="col-span-1" *ngIf="card.text.toLowerCase().includes(searchTerm.toLowerCase())">
