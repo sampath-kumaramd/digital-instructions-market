@@ -43,45 +43,52 @@ export class HomeComponent {
     {
       text: 'Multipacker - running the machine guide',
       subText: 'Industrial Machinery • Exopro',
-      imageSrc: '../../../../assets/workflow-1.svg'
+      imageSrc: '../../../../assets/workflow-1.svg',
+      category: ' Industrial Machinery'
     },
     {
-      text: 'Becher Identifizierung ',
+      text: 'Becher Identifizierung',
       subText: 'Industrial Machinery • Exopro',
-      imageSrc: '../../../../assets/workflow-2.svg'
+      imageSrc: '../../../../assets/workflow-2.svg',
+      category: ' Industrial Machinery'
     },
     {
-      text: 'MULTIVAC R240 - Start guide',
+      text: 'MULTIVAC R240 - Start guide',
       subText: 'Industrial Machinery • Exopro',
-      imageSrc: '../../../../assets/workflow-3.svg'
+      imageSrc: '../../../../assets/workflow-3.svg',
+      category: ' Industrial Machinery'
     },
     {
       text: 'Multipacker - Safety checks',
       subText: 'Industrial Machinery • Exopro',
-      imageSrc: '../../../../assets/workflow-4.svg'
+      imageSrc: '../../../../assets/workflow-4.svg',
+      category: ' Industrial Machinery'
     },
     {
       text: 'Multipacker - Safety checks',
       subText: 'Industrial Machinery • Exopro',
-      imageSrc: '../../../../assets/workflow-5.svg'
+      imageSrc: '../../../../assets/workflow-5.svg',
+      category: ' Industrial Machinery'
     },
     {
-      text: 'MULTIVAC R240 - Start guide',
+      text: 'MULTIVAC R240 - Start guide',
       subText: 'Industrial Machinery • Exopro',
-      imageSrc: '../../../../assets/workflow-6.svg'
+      imageSrc: '../../../../assets/workflow-6.svg',
+      category: ' Industrial Machinery'
     },
     {
-      text: 'Becher Identifizierung ',
+      text: 'Becher Identifizierung',
       subText: 'Industrial Machinery • Exopro',
-      imageSrc: '../../../../assets/workflow-7.svg'
+      imageSrc: '../../../../assets/workflow-7.svg',
+      category: ' Industrial Machinery'
     },
     {
       text: 'Multipacker - running the machine guide',
       subText: 'Industrial Machinery • Exopro',
-      imageSrc: '../../../../assets/workflow-8.svg'
+      imageSrc: '../../../../assets/workflow-8.svg',
+      category: ' Industrial Machinery'
     }
   ];
-
   searchTerm: string = '';
   getSearchResultCount(): number {
     if (!this.searchTerm) {
