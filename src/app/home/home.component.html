@@ -30,12 +30,9 @@
         <ng-container *ngFor="let card of workFlowCards; let i = index">
             <div class="col-span-1" *ngIf="card.text.toLowerCase().includes(searchTerm.toLowerCase())">
                 <app-workflow-card
-                [text]="card.text"
-                [subText]="card.subText"
-                [imageSrc]="card.imageSrc"
+                [card]="card"
                 [index]="i"
                 [parent]="this"
-                [category]="card.category"
               ></app-workflow-card>
             </div>
         </ng-container>
